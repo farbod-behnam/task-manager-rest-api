@@ -1,7 +1,6 @@
-package com.taskmanager.entities;
+package com.taskmanager.entity;
 
 import jakarta.persistence.*;
-import org.bson.types.ObjectId;
 
 @Entity
 public class Task {

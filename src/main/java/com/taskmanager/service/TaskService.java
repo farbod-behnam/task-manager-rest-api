@@ -1,7 +1,7 @@
-package com.taskmanager.services;
+package com.taskmanager.service;
 
-import com.taskmanager.entities.Task;
-import com.taskmanager.repositories.TaskRepositoryH2;
+import com.taskmanager.entity.Task;
+import com.taskmanager.repository.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,19 +10,18 @@ import java.util.List;
 @Service
 public class TaskService {
 
-    private final TaskRepositoryH2 taskRepository;
+    private final Repository<Task> taskRepository;
 
     @Autowired
-    public TaskService(TaskRepositoryH2 taskRepository) {
+    public TaskService(Repository<Task> taskRepository) {
         this.taskRepository = taskRepository;
     }
-
 
     public List<Task> findAll() {
         return taskRepository.findAll();
     }
 
     public Task create(Task task) {
-        return taskRepository.save(task);
+        return taskRepository.create(task);
     }
 }

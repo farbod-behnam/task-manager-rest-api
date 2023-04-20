@@ -1,7 +1,7 @@
-package com.taskmanager.controllers;
+package com.taskmanager.controller;
 
-import com.taskmanager.entities.Task;
-import com.taskmanager.services.TaskService;
+import com.taskmanager.entity.Task;
+import com.taskmanager.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
